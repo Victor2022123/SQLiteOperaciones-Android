@@ -47,10 +47,10 @@
         app:layout_constraintTop_toBottomOf="@+id/usuarioNombre" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/usuarioPassword"
         android:layout_width="350dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
         android:gravity="center|center_horizontal"
         android:hint="@string/txt_password"

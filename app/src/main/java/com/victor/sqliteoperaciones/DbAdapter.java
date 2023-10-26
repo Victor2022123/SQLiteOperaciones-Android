@@ -43,7 +43,7 @@ public class DbAdapter {
         }
 
         //Se crea la base de datos
-        public void OnCreate(SQLiteDatabase db) {
+        public void onCreate(SQLiteDatabase db) {
 
             try {
                 db.execSQL(CREATE_TABLE);
