@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.victor.sqliteoperaciones"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.victor.sqliteoperaciones"

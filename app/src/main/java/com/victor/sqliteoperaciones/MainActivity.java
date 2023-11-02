@@ -9,17 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     EditText usuario, password;
     DbAdapter helper;
+    @Override
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         usuario = (EditText) findViewById(R.id.usuarioNombre);
         password= (EditText) findViewById(R.id.usuarioPassword);
 
         helper= new DbAdapter(this);
     }
     public void agregarUsuario(View view){
-
+    //    Mensaje.aviso(this, "Insercion Exitosa");
         String datoUsuario =usuario.getText().toString();
         String datoPassword =password.getText().toString();
         if (datoUsuario.isEmpty() || datoPassword.isEmpty())
@@ -40,5 +42,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
+    public void  verDatos(View view){
+        String datos = helper.getData();
+        Mensaje.aviso(this, datos);
+    }
 }
